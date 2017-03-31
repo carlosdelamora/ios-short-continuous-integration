@@ -30,6 +30,7 @@ func toRoman(_ number: Int) -> String {
         
         let arabicValue = arabicValues[index]
         let div = startingValue / arabicValue
+        
 
         if div > 0 {
             for _ in 0..<div {
