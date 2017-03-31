@@ -2,11 +2,12 @@
 //  RomanNumeralCalculatorTests.swift
 //  RomanNumeralCalculatorTests
 //
-//  Created by Jarrod Parkes on 11/29/16.
-//  Copyright © 2016 buddybuild. All rights reserved.
+//  Created by Carlos De la mora on 3/31/17.
+//  Copyright © 2017 buddybuild. All rights reserved.
 //
 
 import XCTest
+@testable import RomanNumeralCalculator
 
 class RomanNumeralCalculatorTests: XCTestCase {
     
@@ -23,6 +24,9 @@ class RomanNumeralCalculatorTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(toRoman(1),"I")
+        XCTAssertEqual(toRoman(4), "IV")
+        XCTAssertEqual(toRoman(2), "II")
     }
     
     func testPerformanceExample() {
