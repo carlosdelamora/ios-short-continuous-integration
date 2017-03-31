@@ -26,11 +26,29 @@ class RomanNumeralCalculatorUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        XCUIDevice.shared().orientation = .portrait
     }
     
-    func testExample() {
+    func testAddOnePlusOne() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        let iButton = app.buttons["I"]
+        let calculatedLabel = app.staticTexts["calculated_value"]
+        
+        // tap I
+        iButton.tap()
+        XCTAssertEqual(calculatedLabel.label, "I")
+        
+        //tap "+"
+        app.buttons["+"].tap()
+        //tap "I"
+        iButton.tap()
+        XCTAssertEqual(calculatedLabel.label, "II")
+        
+        
     }
     
 }
